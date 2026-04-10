@@ -15,3 +15,9 @@ provider "aws" {
 resource "aws_s3_bucket" "demo_bucket" {
   bucket = "dipanshu-bucket-15"
 }
+
+resource "aws_s3_object" "bucket-data" {
+    bucket = "dipanshu-bucket-15"
+    source = "./myfile.txt"
+    key = "mydata.txt"
+}
