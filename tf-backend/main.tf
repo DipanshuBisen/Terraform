@@ -6,7 +6,7 @@ terraform {
       version = "6.40.0"
     }
   }
-  backend "s3" {
+  backend "" {
     bucket = "dipanshu-7ea935fdf4424ea3"
     key = "backend.tfstate"
     region = "ap-south-1"
