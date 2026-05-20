@@ -30,7 +30,7 @@ resource "aws_launch_template" "MyTemplate" {
     )
 
    tags = {
-    Name = "temp"
+    Name = "temp1"
   }
 
 }
