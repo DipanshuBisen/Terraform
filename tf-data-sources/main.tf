@@ -21,6 +21,18 @@ output "aws-ami" {
   
 }
 
+
+# Security Group
+data "aws_security_group" "name" {
+  tags = {
+    mytg = "http"
+  }
+}
+
+output "aws-SG" {
+  value = data.aws_security_group.name
+}
+
 resource "aws_instance" "mywebserver" {
   ami = "ami-05d2d839d4f73aafb"
   instance_type = "t3.micro"
