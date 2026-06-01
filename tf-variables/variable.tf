@@ -8,7 +8,13 @@ variable "aws_instance_type" {
 }
 
 variable "root_volume_size" {
-  description = "Give the Volume size!"
+  description = "Give the root volume size!"
   type = number
   default = 20
+}
+
+variable "root_volume_type" {
+  description = "Give the root volume type"
+  type = string
+  default = "gp2"
 }
