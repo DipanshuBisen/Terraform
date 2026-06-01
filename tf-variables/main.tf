@@ -17,7 +17,7 @@ resource "aws_instance" "myserver" {
 
   root_block_device {
     delete_on_termination = true
-    volume_size = 30
+    volume_size = var.root_volume_size
     volume_type = "gp2"
   }
   tags = {
